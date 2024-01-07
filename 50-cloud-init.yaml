@@ -3,11 +3,14 @@
 # network configuration capabilities, write a file
 # /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
 # network: {config: disabled}
-network:
     version: 2
     ethernets:
       eth0:
         dhcp4: true
+        dhcp4-overrides:
+          use-dns: false
+        nameservers:
+          addresses: [127.0.0.1]
         optional: true
     wifis:
         renderer: networkd
