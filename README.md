@@ -13,3 +13,5 @@ Enable eth0 to run on Raspberry Pi.
         optional: true
 ```
 After saving run `sudo netplan apply`
+
+OR if on new mounted image, edit netplan config file in boot partition.
